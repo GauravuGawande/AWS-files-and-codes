@@ -1,0 +1,11 @@
+ lsblk
+ sudo file -s /dev/xvdbf
+ sudo file -s /dev/xvda1
+ sudo mkfs -t xfs /dev/xvdbf
+ sudo mount /dev/xvdbf /home/ec2-user/test/   or  sudo mount /dev/xvdbf ~/test
+ sudo umount /dev/xvdbf
+ sudo blkid
+ /etc/fstab
+ uuid  code  path of volume attached folder xfs defaults,nofail
+ sudo growpart /dev/xvda 1
+  sudo xfs_growfs -d /
